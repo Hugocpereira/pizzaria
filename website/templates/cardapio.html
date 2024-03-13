@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <title>
+        Pizzabot
+    </title>
+</head>
+
+<body>
+    <div>
+        <h1>
+            Para começar escolha quais lanches vamos adcionar ao carrinho
+        </h1>
+        <fieldset id="pedido">
+            <legend>
+                Escolha o seu pedido
+            </legend>
+            <label for="">
+                Lanche:
+                <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder=" ESCOLHA SEU LANCHE"
+                    list="lanche">
+                <datalist id="lanche">
+                    <option value="">
+                    <option value="pizza">PIZZA</option>
+                    <option value="burger">HAMBÚRGUER</option>
+                    <option value="salgados">SALGADOS</option>
+                    <option value="doces">SOBREMESAS</option>
+                    <option value="bebida">BEBIDAS</option>
+                </datalist>
+                Q°:
+                <input placeholder="QUANTIDADE" type="number" name="tNum" id="cNum" min="0" max="999999">
+            </label>
+            <!-- <div>
+                    Sabor:
+                    <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Escolha o sabor"
+                        list="cidades">
+                    <datalist id="cidades">
+                        <option value="">NULL</option>
+                        <option value="">NULL</option>
+                        <option value="">NULL</option>
+                        <option value="">NULL</option>
+                    </datalist>
+                </div> -->
+        </fieldset>
+        <fieldset id="bebidas">
+            <legend>
+                BEBIDAS
+            </legend>
+            <label for="">
+                Bebidas:
+                <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Escolha a sua bebida"
+                    list="cidades">
+                <datalist id="cidades">
+                    <option value="REFRIGERANTE">
+                        Coca-Cola
+                    </option>
+                    <option value="REFRIGERANTE">
+                        Fanta
+                    </option>
+                    <option value="REFRIGERANTE">
+                        Guarana Mineiro
+                    </option>
+                    <option value="CERVEJA">
+                        Brahma
+                    </option>
+                    <option value="CERVEJA">
+                        Itaipava
+                    </option>
+                    <option value="SUCO">
+                        Suco de Laranja
+                    </option>
+                    <option value="SUCO">
+                        Suco de Uva
+                    </option>
+                    <option value="ÀGUA">
+                        Àgua com gás
+                    </option>
+                    <option value="ÀGUA">
+                        Àgua sem gás
+                    </option>
+                </datalist>
+                Q°
+                <input placeholder="QUANTIDADE" type="number" name="tNum" id="cNum" min="0" max="999999">
+            </label>
+        </fieldset>
+        <fieldset id="formasDePagamento">
+            <legend>
+                Forma de pagamento
+            </legend>
+            <label for="">
+                Pagamento:
+                <input type="text" maxlength="40" size="20" placeholder="Escreva a forma de pagamento" list="pagamento">
+                <datalist id="pagamento">
+                    <option value="">
+                    </option>
+                    <option value="PIX">PIX</option>
+                    <option value="Maquininha de cartão">Crédito ou Debito</option>
+                    <option value="Dinheiro">Dinheiro</option>
+                </datalist>
+            </label>
+        </fieldset>
+        <fieldset id="endereco">
+            <legend>
+                Endereço do Usuário
+            </legend>
+            <label for="cRua">
+                Lagradouro:
+                <input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Av, Trav, ...">
+                N°:
+                <input type="number" name="tNum" id="cNum" min="0" max="999999">
+            </label>
+            <label for="">
+                Bairro:
+                <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Escreva seu bairro"
+                    list="Bairro">
+                <datalist id="Bairro">
+                    <option value="UDIA">CENTRO</option>
+                    <option value="UDIA">FUNDINHO</option>
+                    <option value="UDIA">NOSSA SENHORA APARECIDA</option>
+                    <option value="UDIA">MARTINS</option>
+                    <option value="UDIA">OSVALDO REZENDE</option>
+                    <option value="UDIA">BOM JESUS</option>
+                    <option value="UDIA">BRASIL</option>
+                    <option value="UDIA">CAZECA</option>
+                    <option value="UDIA">LIDICE</option>
+                    <option value="UDIA">DANIEL FONSECA</option>
+                    <option value="UDIA">TABAJARAS</option>
+                    <option value="UDIA">PRESIDENTE ROOSEVELT</option>
+                    <option value="UDIA">JARDIM BRASILIA</option>
+                    <option value="UDIA">SÃO JOSÉ</option>
+                    <option value="UDIA">MARTA HELENA</option>
+                    <option value="UDIA">PACAEMBU</option>
+                    <option value="UDIA">SANTA ROSA</option>
+                    <option value="UDIA">RESIDENCIAL GRAMADO</option>
+                    <option value="UDIA">NOSSA SENHORA DAS GRAÇAS</option>
+                    <option value="UDIA">MINAS GERAIS</option>
+                    <option value="UDIA">DISTRITO INDUSTRIAL</option>
+                    <option value="UDIA">MARAVILHA</option>
+                    <option value="UDIA">JARAGUA</option>
+                    <option value="UDIA">PLANALTO</option>
+                    <option value="UDIA">CHACARÁS TUBALINA</option>
+                    <option value="UDIA">LUIZOTE DE FREITAS</option>
+                    <option value="UDIA">JARDIM DAS PALMEIRAS</option>
+                    <option value="UDIA">JARDIM PATRICIA</option>
+                    <option value="UDIA">CHACARÁS PANORAMA</option>
+                    <option value="UDIA">JARDIM HOLANDA </option>
+                    <option value="UDIA">JARDIM EUROPA</option>
+                    <option value="UDIA">JARDIM CANAÃ</option>
+                    <option value="UDIA">MANSOUR</option>
+                    <option value="UDIA">TAIAMAN</option>
+                    <option value="UDIA">GUARANI</option>
+                    <option value="UDIA">TOCANTINS</option>
+                    <option value="UDIA">MORADA DO SOL</option>
+                    <option value="UDIA">MONTE HEBRON</option>
+                    <option value="UDIA">RESIDENCIAL PEQUIS</option>
+                    <option value="UDIA">MORADA NOVA</option>
+                    <option value="UDIA">TUBALINA</option>
+                    <option value="UDIA">CIDADE JARDIM</option>
+                    <option value="UDIA">NOVA UBERLANDIA</option>
+                    <option value="UDIA">PATRIMÔNIO</option>
+                    <option value="UDIA">MARADA DA COLINA</option>
+                    <option value="UDIA">VIGILATO PEREIRA</option>
+                    <option value="UDIA">SARAIVA</option>
+                    <option value="UDIA">LAGOINHA</option>
+                    <option value="UDIA">CARAJAS</option>
+                    <option value="UDIA">PAMPULHA</option>
+                    <option value="UDIA">JARDIM KARAIBA</option>
+                    <option value="UDIA">JARDIM INCONFIDÊNCIA</option>
+                    <option value="UDIA">SANTA LUZIA</option>
+                    <option value="UDIA">GRANADA</option>
+                    <option value="UDIA">SÃO JORGE</option>
+                    <option value="UDIA">LARANJEIRAS</option>
+                    <option value="UDIA">SHOPPING PARK</option>
+                    <option value="UDIA">JARDIM SUL</option>
+                    <option value="UDIA">GÁVEA</option>
+                    <option value="UDIA">SANTA MÔNICA</option>
+                    <option value="UDIA">TIBERY</option>
+                    <option value="UDIA">SEGISMUNDO PEREIRA</option>
+                    <option value="UDIA">UMUARAMA</option>
+                    <option value="UDIA">ALTO UMUARAMA</option>
+                    <option value="UDIA">CUSTODIO PEREIRA</option>
+                    <option value="UDIA">MANSÕES AEROPORTO</option>
+                    <option value="UDIA">MORUMBI</option>
+                    <option value="UDIA">RESIDENCIAL INTEGRAÇÃO</option>
+                    <option value="UDIA">MORADA DOS PASSAROS</option>
+                    <option value="UDIA">PORTAL DO VALE</option>
+                    <option value="UDIA">GRANJA MARILLEUSA</option>
+                    <option value="UDIA">GRAND VILLE</option>
+                    <option value="UDIA">CRUZEIRO DOS PEIXOTOS</option>
+                    <option value="UDIA">MARTINÉSIA</option>
+                    <option value="UDIA">TAPUIRAMA</option>
+                    <option value="UDIA">MIRAPORANGA</option>
+                    <option value="UDIA">MIRANDA</option>
+                </datalist>
+            </label>
+            <label for="">
+                Estado:
+                <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Escreva seu estado"
+                    list="estados">
+                <datalist id="estados">
+                    <option value="RJ">Rio de janeiro</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PR">Paraná</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                </datalist>
+            </label>
+            <label for="">
+                Cidade:
+                <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Escreva sua cidade"
+                    list="cidades">
+                <datalist id="cidades">
+                    <option value="MG">Uberlândia</option>
+                    <option value="MG">Uberaba</option>
+                    <option value="MG">Araguari</option>
+                    <option value="MG">Frutal</option>
+                    <option value="MG">Ituiutaba</option>
+                </datalist>
+            </label>
+        </fieldset>
+    </div>
+    <a href="sucesso"><button>FINALIZAR</button></a>
+</body>
+
+</html>
